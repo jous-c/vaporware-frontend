@@ -1,0 +1,23 @@
+.form-container{
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #cfc3a381;
+    position: fixed;
+    z-index: 5;
+   
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    width: 640px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 14px;
+}

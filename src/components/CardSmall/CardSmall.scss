@@ -1,0 +1,43 @@
+
+.card-small{
+    background-color: #ffffff;
+    height:  15rem;
+    border-radius: 14px;
+    border: 1px dotted #c4c4c4;
+
+    &__image{
+        width: 100%;
+        height:80%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+      
+    }
+
+    &__description{
+        padding: 0.5rem;
+    }
+}
+
+.blurred{
+    border: 20px solid #f9f9f1;
+    border-radius: 12px;
+    filter: blur(4px) opacity(25%);
+    transition: filter 3s;
+    cursor: pointer;
+}
+
+.default{
+    color: red;
+    // transition: filter 3s;
+    cursor: pointer;
+  
+}
+
+.default-border{
+    border: 28px solid #f9f9f1;
+    border-radius: 12px;
+}
+
+.blurred-border{
+    filter: blur(40px) opacity(50%);
+}
