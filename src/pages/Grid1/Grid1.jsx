@@ -1,6 +1,5 @@
 import '../Grid1/Grid.scss'
 import image1 from '../../assets/images/solar-eclipse.png'
-import { Card1 } from '../../components/Card/Card1'
 import { useState } from 'react';
 
 const Grid1 = () => {

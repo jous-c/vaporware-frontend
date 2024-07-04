@@ -1,4 +1,4 @@
-import "../Grid4/Grid4.scss";
+import "./MainBoard.scss";
 import CardMedium from "../../components/CardMedium/CardMedium.jsx";
 import CardSmall from "../../components/CardSmall/CardSmall.jsx";
 import CardLarge from "../../components/CardLarge/CardLarge.jsx";
@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import UploadForm from "../../components/UploadForm/UploadForm.jsx";
 import { motion } from 'framer-motion';
 
-const Grid4 = () => {
+const MainBoard = () => {
   const API_URL = "http://localhost:8090/snippets";
 
   const [snippetsData, setSnippetsData] = useState([]);
@@ -82,4 +82,4 @@ const Grid4 = () => {
   );
 };
 
-export { Grid4 };
+export { MainBoard  };
