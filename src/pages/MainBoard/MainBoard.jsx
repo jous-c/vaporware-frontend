@@ -14,7 +14,6 @@ const MainBoard = () => {
 
   const getSnippets = async () => {
     const response = await axios("http://localhost:8090/snippets");
-    console.log(response.data);
     setSnippetsData(response.data);
   };
 
@@ -39,9 +38,7 @@ const MainBoard = () => {
     return (
 
       <main>
-        <Nav 
-          getSnippets = {getSnippets}
-           />
+       
         {chunks.map((chunk, index) => (
           <div className="main-container">
             <section key={snippetsData.id} className="container-large">
@@ -76,6 +73,9 @@ const MainBoard = () => {
 
   return (
     <>
+     <Nav 
+          getSnippets = {getSnippets}
+           />
     <section className="background">
       {Cards()}
     </section>

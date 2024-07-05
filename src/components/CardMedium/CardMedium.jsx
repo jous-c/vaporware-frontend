@@ -30,7 +30,6 @@ const CardMedium = ({ chunkData}) => {
         timedBlur();
       }, []);
 
-    console.log(chunkData)
     return (
         <>
              <div onClick={clickToChange} className={`card-medium ${style}`}> 
