@@ -60,7 +60,7 @@ const Grid1 = () => {
       </div>
       <div className="container">
         <div className="a">A</div>
-        {/* <div className="c">C Make a promise, but also wait on it</div> */}
+  
         <Card1 />
 
         <div className={`e ${style}`} onClick={clickToChange} onMouseEnter={hoverHandler}>E Make a promise, but wait on it</div>
@@ -72,7 +72,7 @@ const Grid1 = () => {
 
         <div className={`g ${style}`} onClick={clickToChange}> <img className="image" src={image1}/> G</div>
         <div className="h blurred"> <img className="image" src={image1}/> H</div>
-        {/* <div className="h">1H</div> */}
+
         <div className="i">I</div>
         <div className="j">J</div>
         <div className="k">K</div>

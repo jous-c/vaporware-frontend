@@ -1,8 +1,8 @@
 import "../CardSmall/CardSmall.scss"
-import image1 from "../../assets/images/solar-eclipse.png"
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
-const CardSmall = ({data, chunkData} ) => {
+const CardSmall = ({data, chunkData, onClick} ) => {
     
     const defaultStyle = "default"
     const defaultBorder = ""
@@ -34,8 +34,8 @@ const CardSmall = ({data, chunkData} ) => {
     return (
 
         <>
-        {/* <div className={`default-border ${style}`}> */}
-            <div onClick={clickToChange} className={`card-small ${style}`}> 
+       
+            <motion.div onClick={clickToChange} initial={{opacity: 0}} animate ={{opacity:1}} className={`card-small ${style}`}> 
             
                 <img className="card-small__image" src={`http://localhost:8090/${chunkData?.image}`}/>
                     <div className="card-small__description">
@@ -43,9 +43,7 @@ const CardSmall = ({data, chunkData} ) => {
                         <p>08/08/2028</p>
                     </div>
         
-            </div>
-            {/* </div> */}
-         
+            </motion.div>
         </>
     )
 }

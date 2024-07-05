@@ -2,10 +2,10 @@ import "./MainBoard.scss";
 import CardMedium from "../../components/CardMedium/CardMedium.jsx";
 import CardSmall from "../../components/CardSmall/CardSmall.jsx";
 import CardLarge from "../../components/CardLarge/CardLarge.jsx";
+import Nav from '../../components/Nav/Nav.jsx';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import UploadForm from "../../components/UploadForm/UploadForm.jsx";
-import { motion } from 'framer-motion';
 
 const MainBoard = () => {
   const API_URL = "http://localhost:8090/snippets";
@@ -39,6 +39,9 @@ const MainBoard = () => {
     return (
 
       <main>
+        <Nav 
+          getSnippets = {getSnippets}
+           />
         {chunks.map((chunk, index) => (
           <div className="main-container">
             <section key={snippetsData.id} className="container-large">
@@ -74,7 +77,6 @@ const MainBoard = () => {
   return (
     <>
     <section className="background">
-    <UploadForm getSnippets={getSnippets} />
       {Cards()}
     </section>
     

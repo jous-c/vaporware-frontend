@@ -1,8 +1,9 @@
 import '../UploadForm/UploadForm.scss'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
+import close from '../../assets/close-icon.svg'
 
-const UploadForm = ({ data, getSnippets }) => {
+const UploadForm = ({ onClose, getSnippets }) => {
 
     const navigate = useNavigate()
     const postNewSnippet = async(newSnippet) => {
@@ -24,7 +25,7 @@ const UploadForm = ({ data, getSnippets }) => {
 
         // if(getSnippetsData){
             getSnippets()
-            navigate('/grid4')
+            navigate('/main')
         // }
 
     }
@@ -33,6 +34,7 @@ const UploadForm = ({ data, getSnippets }) => {
         <>  
         <section className="form-container">
             <form onSubmit={submitHandler} className="form"> 
+                <img onClick={onClose()} className="icon" src={close}/>
                 <input type="file" name="file"/> 
                 <input type="text" name="title" placeholder="title"/> 
                 <textarea type="text" name="description" placeholder="description"></textarea>

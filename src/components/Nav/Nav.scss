@@ -1,4 +1,14 @@
 .Nav{
-    padding-left: 4rem;
+    padding: 1rem 4rem 0 4rem;
     display: flex;
+    justify-content: right;
+}
+
+.button{
+    background-color: #f79336;
+    border-radius: 10px;
+    border: 1px dotted #000;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    height: 2rem;
 }

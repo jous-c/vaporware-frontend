@@ -2,10 +2,10 @@
 
 .background{
     background-size: 28px 28px;
-
     background-image:
-      linear-gradient(to right, rgb(213, 207, 148)  1px, transparent 1px),
-      linear-gradient(to bottom, rgb(213, 207, 148) 1px, transparent 1px);
+      linear-gradient(to right, rgb(196, 196, 196)  1px, transparent 1px),
+      linear-gradient(to bottom, rgb(196, 196, 196) 1px, transparent 1px);
+    margin: 0 3rem 0 3rem;
 }
 
 .main-container{
@@ -13,7 +13,6 @@
     flex-wrap: wrap;
     width: 100%;
     gap: 3rem;
-    margin: 0 4rem 0 4rem;
     padding-top: 2.5rem;
    
 }
