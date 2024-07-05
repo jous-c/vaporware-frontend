@@ -4,7 +4,7 @@
     background-size: 28px 28px;
     background-image:
       linear-gradient(to right, rgb(196, 196, 196)  1px, transparent 1px),
-      linear-gradient(to bottom, rgb(196, 196, 196) 1px, transparent 1px);
+      radial-gradient(circle at 1px 1px, black 1px, transparent 0);
     margin: 0 3rem 0 3rem;
 }
 

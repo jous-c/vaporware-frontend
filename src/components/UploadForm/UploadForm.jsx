@@ -12,7 +12,6 @@ const UploadForm = ({ onClose, getSnippets }) => {
         const newSnippet = {
             title: e.target.title.value,
             description: e.target.description.value,
-            file: e.target.file.value,
         }
         console.log(newSnippet)
         // postNewSnippet(newSnippet)
@@ -29,8 +28,8 @@ const UploadForm = ({ onClose, getSnippets }) => {
         <>  
         <section className="form-container">
             <form onSubmit={submitHandler} className="form"> 
-                <img onClick={onClose()} className="icon" src={close}/>
-                <input type="file" name="file" className="input-small" /> 
+                <img onClick={onClose} className="icon" src={close}/>
+                {/* <input type="file" name="file" className="input-small" />  */}
                 <input type="text" name="title" placeholder="title"/> 
                 <textarea type="text" name="description" placeholder="description"></textarea>
                 <button> upload it </button>
