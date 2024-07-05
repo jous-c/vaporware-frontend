@@ -1,17 +1,23 @@
+@use "../../styles/typography.scss";
+
 .Nav{
     padding: 1rem 3rem 0 3rem;
     position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    z-index: 5;
     
 }
 
 .button{
     background-color: #f79336;
-    border-radius: 16px;
-    border: 1px dotted #000;
+    border-radius: 18px;
     padding-right: 2rem;
     padding-left: 2rem;
     height: 2.5rem;
+    border: 1px solid #4c4c4c;
+    font-family: 'Stellar-light';
+    font-size: 1.25rem;
 }
+

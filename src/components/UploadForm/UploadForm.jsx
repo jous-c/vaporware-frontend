@@ -30,7 +30,7 @@ const UploadForm = ({ onClose, getSnippets }) => {
         <section className="form-container">
             <form onSubmit={submitHandler} className="form"> 
                 <img onClick={onClose()} className="icon" src={close}/>
-                <input type="file" name="file"/> 
+                <input type="file" name="file" className="input-small" /> 
                 <input type="text" name="title" placeholder="title"/> 
                 <textarea type="text" name="description" placeholder="description"></textarea>
                 <button> upload it </button>
