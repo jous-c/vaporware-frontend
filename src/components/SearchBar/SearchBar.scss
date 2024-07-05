@@ -1,11 +1,11 @@
 @use "../../styles/typography.scss";
 
 .searchbar{
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding-left: 1.5rem;
     width: 32rem;
     border-radius: 18px;
-    border: 1px solid #4c4c4c;
-    background-color: #fff;
+    border: 1px dotted #4c4c4c;
+    background-color: #ffffffee;
     font-family: 'Stellar-light';
     font-size: 1.25rem;
 }

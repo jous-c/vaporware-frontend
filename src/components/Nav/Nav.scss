@@ -1,22 +1,33 @@
 @use "../../styles/typography.scss";
 
-.Nav{
-    padding: 1rem 3rem 0 3rem;
+.nav{
+    padding: 1.5rem 3rem 0 3rem;
     position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
     z-index: 5;
+
+    &__container-right{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__counter{
+        font-family: 'Stellar-light';
+        font-size: 1.75rem;
+    }
     
 }
 
 .button{
-    background-color: #f79336;
+    background-color: #f7a619;
     border-radius: 18px;
     padding-right: 2rem;
     padding-left: 2rem;
-    height: 2.5rem;
-    border: 1px solid #4c4c4c;
+    height: 2.75rem;
+    border: 1px dotted #4c4c4c;
     font-family: 'Stellar-light';
     font-size: 1.25rem;
 }

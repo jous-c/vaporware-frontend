@@ -3,11 +3,12 @@ import { useState } from 'react'
 import UploadForm from '../UploadForm/UploadForm'
 import SearchBar from '../SearchBar/SearchBar'
 
-const Nav = ({ getSnippets}) => {
+const Nav = ({ getSnippets, snippetsData}) => {
     
     const [modalOpen, setModalOpen] = useState(false)
 
     const handleClickOpen = () => {
+        console.log("Button clicked");
         setModalOpen(true);
     }
 
@@ -18,9 +19,15 @@ const Nav = ({ getSnippets}) => {
 
     return (
         <>
-            <nav className="Nav"> 
+            <nav className="nav"> 
                 <SearchBar />
-                <button onClick={handleClickOpen} className="button"> add </button>
+
+                <div className="nav__container-right">
+                    <h2 className="nav__counter"> Saved / {snippetsData.length} </h2>
+                    <h2 className="nav__counter"> Lost / 5 </h2>
+                    <button onClick={handleClickOpen} className="button"> add </button>
+                </div>
+               
                 {modalOpen && <UploadForm onClose={handleModalClose} getSnippets={getSnippets} />}
             </nav>
         </>

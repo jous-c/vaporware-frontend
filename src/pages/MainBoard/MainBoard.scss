@@ -4,8 +4,8 @@
     background-size: 28px 28px;
     background-image:
       linear-gradient(to right, rgb(196, 196, 196)  1px, transparent 1px),
-      radial-gradient(circle at 1px 1px, black 1px, transparent 0);
-    margin: 0 3rem 0 3rem;
+      linear-gradient(to bottom, rgb(196, 196, 196) 1px, transparent 1px);
+    margin: 0 4rem 0 4rem;
 }
 
 .main-container{
@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     width: 100%;
     gap: 3rem;
-    padding-top: 6rem;
+    padding: 7rem 2rem 0 2rem;
    
 }
 

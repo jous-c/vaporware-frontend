@@ -19,13 +19,11 @@ const MainBoard = () => {
     getSnippets();
   }, []);
 
-  //mapping version
-
-
   return (
     <>
      <Nav 
           getSnippets = {getSnippets}
+          snippetsData = {snippetsData}
            />
     <section className="background">
       <CardsGrid 
