@@ -6,11 +6,6 @@ import close from '../../assets/close-icon.svg'
 const UploadForm = ({ onClose, getSnippets }) => {
 
     const navigate = useNavigate()
-    const postNewSnippet = async(newSnippet) => {
-        await axios.post('http://localhost:8090/snippets', newSnippet)
-    }
-    console.log(getSnippets)
-
 
     const submitHandler = async (e) => {
         e.preventDefault()

@@ -1,14 +1,16 @@
 .Nav{
-    padding: 1rem 4rem 0 4rem;
+    padding: 1rem 0 0 0;
+    position: fixed;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
+    
 }
 
 .button{
     background-color: #f79336;
-    border-radius: 10px;
+    border-radius: 16px;
     border: 1px dotted #000;
     padding-right: 2rem;
     padding-left: 2rem;
-    height: 2rem;
+    height: 2.5rem;
 }
