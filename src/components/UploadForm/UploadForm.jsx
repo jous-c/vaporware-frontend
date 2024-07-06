@@ -31,6 +31,12 @@ const UploadForm = ({ onClose, getSnippets }) => {
     visible: {
       y: "0",
       opacity: 1,
+      transition: {
+        durtion: 0.1,
+        type: "spring",
+        damping: 20,
+        stiffness: 200,
+      }
     },
     exit: {
       y: "100vh",
@@ -42,17 +48,26 @@ const UploadForm = ({ onClose, getSnippets }) => {
     <>
        
       <section className="form-container">
-        <form onSubmit={submitHandler} className="form">
-          <img onClick={onClose} className="icon" src={close} />
-          {/* <input type="file" name="file" className="input-small" />  */}
-          <input type="text" name="title" placeholder="title" />
-          <textarea
-            type="text"
-            name="description"
-            placeholder="description"
-          ></textarea>
-          <button> upload it </button>
-        </form>
+        <motion.div
+            onClick={(e) => e.stopPropagation()}
+            variants={dropIn}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            >
+            <form onSubmit={submitHandler} className="form">
+            <img onClick={onClose} className="icon" src={close} />
+            {/* <input type="file" name="file" className="input-small" />  */}
+            <input type="text" name="title" placeholder="title" />
+            <textarea
+                type="text"
+                name="description"
+                placeholder="description"
+            ></textarea>
+            <button> upload it </button>
+            </form>
+        </motion.div>
+        
       </section>
   
     </>
