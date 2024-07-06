@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Grid1/>} /> 
           <Route path="/main" element={<MainBoard />} />
+          {/* <Route path="/longterm" element={<Longterm/>} /> */}
  
       </Routes>
       </BrowserRouter>

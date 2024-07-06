@@ -27,7 +27,7 @@ const Nav = ({ getSnippets, snippetsData}) => {
                 <SearchBar />
 
                 <div className="nav__container-right">
-                    <h2 className="nav__counter"> Saved / {snippetsData.length} </h2>
+                    <h2 className="nav__counter"> Total / {snippetsData.length} </h2>
                     <h2 className="nav__counter"> Lost / 5 </h2>
                     <button onClick={handleClickOpen} className="button"> add </button>
                 </div>

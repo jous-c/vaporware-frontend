@@ -11,6 +11,7 @@ const UploadForm = ({ onClose, getSnippets }) => {
     e.preventDefault();
     const newSnippet = {
       title: e.target.title.value,
+      url: e.target.url.value,
       description: e.target.description.value,
     };
     console.log(newSnippet);
@@ -58,14 +59,15 @@ const UploadForm = ({ onClose, getSnippets }) => {
             <form onSubmit={submitHandler} className="form">
             <img onClick={onClose} className="icon" src={close} />
             {/* <input type="file" name="file" className="input-small" />  */}
-            <input className="input-small" type="text" name="title" placeholder="title" />
+            <input className="input-small" type="text" name="title" placeholder="Title" />
+            <input className="input-small" type="text" name="url" placeholder="URL" />
             <textarea
                 className="input-large"
                 type="text"
                 name="description"
-                placeholder="description"
+                placeholder="Notes"
             ></textarea>
-            <button> upload it </button>
+            <button className="upload-button"> Add to library </button>
             </form>
         </motion.div>
         
