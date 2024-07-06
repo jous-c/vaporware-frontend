@@ -33,10 +33,9 @@ const CardMedium = ({ chunkData}) => {
     return (
         <>
              <div onClick={clickToChange} className={`card-medium ${style}`}> 
+             <img className="card-medium__image" src={`http://localhost:8090/${chunkData.image}`}/>
                  <div className="card-medium__description">
-                    <img src={`http://localhost:8090/${chunkData.image}`}/>
                      <p>{chunkData.title}</p>
-                    
                  </div>
              </div>
         </>

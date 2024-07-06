@@ -40,7 +40,7 @@ const CardSmall = ({data, chunkData, onClick} ) => {
                 <img className="card-small__image" src={`http://localhost:8090/${chunkData?.image}`}/>
                     <div className="card-small__description">
                         <p>{chunkData?.title}</p>
-                        <p>08/08/2028</p>
+                        <p className="card-small__date">{chunkData?.timestamp}</p>
                     </div>
         
             </motion.div>

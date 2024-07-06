@@ -4,3 +4,31 @@
     font-weight: 300;
     font-style: light;
 }
+
+@font-face {
+    font-family: 'Inter';
+    src: url(/src/assets/fonts/InterVariable.ttf);
+    font-weight: 400;
+    font-style: regular;
+}
+
+@font-face {
+    font-family: 'Right Grotesk Mono';
+    src: url(/src/assets/fonts/PPRightGroteskMono-Regular.otf);
+    font-weight: 400;
+    font-style: regular;
+}
+
+@font-face{
+    font-family: 'Stellar-bold';
+    src: url(/src/assets/fonts/PPStellar-Bold.otf);
+    font-weight: 600;
+    font-style: regular;
+}
+
+@font-face{
+    font-family: 'Right Grotesk Mono';
+    src: url(/src/assets/fonts/PPRightGroteskMono-Fine.otf);
+    font-weight: 200;
+    font-style: regular;
+}

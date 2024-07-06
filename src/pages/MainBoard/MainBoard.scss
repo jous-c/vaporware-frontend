@@ -51,6 +51,7 @@
 
 .column-2items{
     width: 45%;
+    height: 100%;
     display:flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -66,20 +67,3 @@
         height: 14rem;
     }
 }
-
-// .blurred{
-//     filter: blur(4px) grayscale(80%) opacity(50%);
-//     transition: filter 3s;
-//     cursor: pointer;
-// }
-
-// .blurred2{
-//     border: 20px solid white;
-//     border-radius: 20px;
-//     filter: blur(2px);
-// }
-
-// .default{
-//   filter: none;
-//   cursor: pointer;
-// }

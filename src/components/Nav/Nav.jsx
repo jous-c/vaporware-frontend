@@ -16,6 +16,10 @@ const Nav = ({ getSnippets, snippetsData}) => {
         setModalOpen(false);
     }
 
+    const lostSnippets = () => {
+        const lostCount = 0;
+        
+    }
 
     return (
         <>
