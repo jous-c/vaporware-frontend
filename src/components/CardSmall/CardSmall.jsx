@@ -30,12 +30,18 @@ const CardSmall = ({data, chunkData, onClick} ) => {
         timedBlur();
       }, []);
 
+      const spring = {
+        type: "spring",
+        stiffness: 400,
+        damping: 30
+      };
+      
 
     return (
 
         <>
        
-            <motion.div onClick={clickToChange} initial={{opacity: 0}} animate ={{opacity:1}} className={`card-small ${style}`}> 
+            <motion.div onClick={clickToChange} layout transition={spring} className={`card-small ${style}`}> 
             
                 <img className="card-small__image" src={`http://localhost:8090/${chunkData?.image}`}/>
                     <div className="card-small__description">

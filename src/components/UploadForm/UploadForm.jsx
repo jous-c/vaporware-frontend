@@ -49,7 +49,7 @@ const UploadForm = ({ onClose, getSnippets }) => {
        
       <section className="form-container">
         <motion.div
-            onClick={(e) => e.stopPropagation()}
+            // onClick={(e) => e.stopPropagation()}
             variants={dropIn}
             initial="hidden"
             animate="visible"
@@ -58,8 +58,9 @@ const UploadForm = ({ onClose, getSnippets }) => {
             <form onSubmit={submitHandler} className="form">
             <img onClick={onClose} className="icon" src={close} />
             {/* <input type="file" name="file" className="input-small" />  */}
-            <input type="text" name="title" placeholder="title" />
+            <input className="input-small" type="text" name="title" placeholder="title" />
             <textarea
+                className="input-large"
                 type="text"
                 name="description"
                 placeholder="description"
