@@ -30,14 +30,21 @@ const CardMedium = ({ chunkData}) => {
         timedBlur();
       }, []);
 
+      const spring = {
+        type: "spring",
+        stiffness: 400,
+        damping: 30
+      };
+      
+
     return (
         <>
-             <div onClick={clickToChange} className={`card-medium ${style}`}> 
+             <motion.div onClick={clickToChange}layout transition={spring} className={`card-medium ${style}`}> 
              <img className="card-medium__image" src={`http://localhost:8090/${chunkData.image}`}/>
                  <div className="card-medium__description">
                      <p>{chunkData.title}</p>
                  </div>
-             </div>
+             </motion.div>
         </>
     )
 }

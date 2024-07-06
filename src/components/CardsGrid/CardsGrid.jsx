@@ -25,7 +25,7 @@ const CardsGrid = ({ snippetsData }) => {
                       {chunk[1] && <CardSmall chunkData={chunk[1]} />}
                     </div>
     
-                    <CardLarge />
+                    {chunk[8] && <CardLarge chunkData={chunk[8]}/>}
                   </div>
                   <div className="row-3items">
                     {chunk[2] && <CardMedium chunkData={chunk[2]} />}
