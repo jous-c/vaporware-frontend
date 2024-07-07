@@ -28,20 +28,28 @@ const InfoModal = ({ onClose }) => {
 
     return(
         <>
-        <section className="form-container">
+        <section className="infocard-container">
         <motion.div
             variants={dropIn}
             initial="hidden"
             animate="visible"
             exit="exit"
             >
-            <form className="form">
+            <section className="info-card">
             <img onClick={onClose} className="icon" src={close} />
             
-    
+            <div>
+                <div className="info-card__container-top">
+                    <h2 className="info-card__title">title of snippet</h2>
+                    <p> notes about this snippet that I saved</p>
+                </div>
 
-            <button className="upload-button"> Add to library </button>
-            </form>
+                <div>
+                    <button>URL</button>
+                    <p>timestamp 123456</p>
+                </div>
+            </div>
+            </section>
         </motion.div>
         
       </section>

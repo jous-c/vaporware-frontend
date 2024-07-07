@@ -8,13 +8,14 @@ const CardSmall = ({ data, chunkData, onClick }) => {
 
   const [style, setStyle] = useState(defaultStyle);
   const [blurBorder, setBlurBorder] = useState(defaultBorder);
-  const [clicked, setClicked] = useState(false);
+  const [ImageVanish, setImageVanish] = useState("");
 
   const clickToChange = () => {
     if (style === "default") setStyle("blurred");
     if (style === "blurred") setStyle("default");
     if (blurBorder === "default-border") setBlurBorder("blurred-border");
   };
+
 
   const timedBlur = (card) => {
     // if current timestamp - data.timestamp is greater than X days in unix time
@@ -61,10 +62,12 @@ const CardSmall = ({ data, chunkData, onClick }) => {
         onClick={clickToChange}
         layout
         transition={spring}
+        
         className={`card-small ${style}`}
       >
+    
         <img
-          className="card-small__image"
+          className={`card-small__image`}
           src={`http://localhost:8090/${chunkData.image}`}
           alt={chunkData.title}
         />
@@ -72,6 +75,7 @@ const CardSmall = ({ data, chunkData, onClick }) => {
           <p>{chunkData?.title}</p>
           <p className="card-small__date">{chunkData?.timestamp}</p>
         </div>
+      
       </motion.div>
     </>
   );
