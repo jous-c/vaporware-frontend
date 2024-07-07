@@ -20,7 +20,7 @@ const UploadForm = ({ onClose, getSnippets }) => {
 
     // if(getSnippetsData){
     getSnippets();
-    navigate("/main");
+    navigate("/");
     // }
   };
 

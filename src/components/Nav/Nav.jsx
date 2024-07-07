@@ -25,7 +25,6 @@ const Nav = ({ getSnippets, snippetsData}) => {
         <>
             <nav className="nav"> 
                 <SearchBar />
-
                 <div className="nav__container-right">
                     <h2 className="nav__counter"> Total / {snippetsData.length} </h2>
                     <h2 className="nav__counter"> Lost / 5 </h2>

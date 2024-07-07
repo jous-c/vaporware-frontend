@@ -1,17 +1,19 @@
 @use "../../styles/typography.scss";
 
 .nav{
-    padding: 1.5rem 3rem 0 3rem;
+    padding: 1.5rem 0 0 3rem;
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     width: 100%;
-    z-index: 5;
+    gap: 2rem;
+    z-index: 2;
 
     &__container-right{
         display: flex;
         gap: 2rem;
         align-items: center;
+        margin-right: 4rem;
     }
 
     &__counter{
@@ -24,7 +26,7 @@
 
 .button{
     background-color: #f7a619;
-    border-radius: 18px;
+    border-radius: 12px;
     padding-right: 2rem;
     padding-left: 2rem;
     height: 2.75rem;

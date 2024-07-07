@@ -1,0 +1,38 @@
+.header{
+    display: flex;
+    align-items: center;
+    margin: 3rem 0 0 3rem;
+    position: fixed;
+    z-index: 4;
+}
+
+.tabs{
+    background-color: #fff;
+    width: 18rem;
+    border: 1px solid #000;
+    border-radius: 12px;
+    height: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    
+    &__item{
+        font-family: 'Right Grotesk Mono';
+        font-size: 1.125rem;
+        height: 100%;
+        width: 100%;
+        padding: 0.75rem 1rem 0.5rem 1rem;
+        
+    }
+
+    &__item:hover{
+        
+        background-color: #000;
+        padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+        width: 100%;
+        border-radius: 12px;
+        color: #fff;
+    }
+
+}

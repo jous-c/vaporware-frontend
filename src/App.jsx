@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-
-import { Grid1 } from './pages/Grid1/Grid1'
+import Library from './pages/Grid1/Grid1'
+import Header from './components/Header/Header'
 import { MainBoard  } from './pages/MainBoard/MainBoard'
 
 function App() {
@@ -10,9 +10,10 @@ function App() {
   return (
     <>
       <BrowserRouter> 
+        <Header />
         <Routes>
-          <Route path="/" element={<Grid1/>} /> 
-          <Route path="/main" element={<MainBoard />} />
+          <Route path="/library" element={<Library/>} /> 
+          <Route path="/" element={<MainBoard />} />
           {/* <Route path="/longterm" element={<Longterm/>} /> */}
  
       </Routes>
