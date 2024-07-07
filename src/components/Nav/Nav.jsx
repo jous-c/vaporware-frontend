@@ -26,9 +26,10 @@ const Nav = ({ getSnippets, snippetsData}) => {
             <nav className="nav"> 
                 <SearchBar />
                 <div className="nav__container-right">
+                <button onClick={handleClickOpen} className="button"> Add </button>
                     <h2 className="nav__counter"> Total / {snippetsData.length} </h2>
                     <h2 className="nav__counter"> Lost / 5 </h2>
-                    <button onClick={handleClickOpen} className="button"> add </button>
+                    
                 </div>
                
                 {modalOpen && <UploadForm onClose={handleModalClose} getSnippets={getSnippets} />}

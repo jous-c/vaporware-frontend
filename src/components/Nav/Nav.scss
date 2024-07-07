@@ -6,7 +6,7 @@
     display: flex;
     justify-content: right;
     width: 100%;
-    gap: 2rem;
+    gap: 1.5rem;
     z-index: 2;
 
     &__container-right{
@@ -17,21 +17,25 @@
     }
 
     &__counter{
-        font-family: 'Stellar-light';
-        font-size: 1.75rem;
+        font-family: 'Right Grotesk Mono';
+        font-size: 1.25rem;
         font-weight: 600;
     }
     
 }
 
 .button{
-    background-color: #f7a619;
+    background-color: #ecde16;
     border-radius: 12px;
     padding-right: 2rem;
     padding-left: 2rem;
     height: 2.75rem;
-    border: 2px dotted #000000;
-    font-family: 'Stellar-light';
+    border: 1px solid #000000;
+    font-family: 'Right Grotesk Mono';
     font-size: 1.25rem;
+}
+
+.button:hover{
+    background-color: #ffee00;
 }
 
