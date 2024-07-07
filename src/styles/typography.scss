@@ -32,3 +32,17 @@
     font-weight: 200;
     font-style: regular;
 }
+
+@font-face{
+    font-family: 'Montreal-regular';
+    src: url(/src/assets/fonts/PPNeueMontreal-Regular.ttf);
+    font-weight: 400;
+    font-style: regular;
+}
+
+@font-face{
+    font-family: 'Montreal-medium';
+    src: url(/src/assets/fonts/PPNeueMontreal-Medium.ttf);
+    font-weight: 500;
+    font-style: regular;
+}

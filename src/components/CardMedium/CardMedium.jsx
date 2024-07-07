@@ -60,7 +60,8 @@ const handleInfoModalClose = () => {
         </div>
       </motion.div>
 
-      {infoModalOpen && <InfoModal onClose={handleInfoModalClose} />}
+      {infoModalOpen && <InfoModal onClose={handleInfoModalClose}
+        chunkData = { chunkData } />}
     </>
   );
 };
