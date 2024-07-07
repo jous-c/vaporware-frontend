@@ -41,9 +41,8 @@ const InfoModal = ({ onClose, chunkData }) => {
                 <div className="info-card__container-left">
                     <div>
     
-                    <h2 className="info-card__title">solar eclipse viewing 101, coldspring nevada</h2>
-                    <p className="info-card__description"> Lorem ipsum dolor sit amet consectetur. Amet bibendum lacus elit ultrices hendrerit pharetra mollis mauris ornare. 
-Natoque etiam aliquam hendrerit purus vel ornare eleifend commodo.</p>
+                    <h2 className="info-card__title">{chunkData.title}</h2>
+                    <p className="info-card__description"> {chunkData.notes}</p>
                     </div>
                   
                     <div className="info-card__bottom">
@@ -51,7 +50,7 @@ Natoque etiam aliquam hendrerit purus vel ornare eleifend commodo.</p>
                     <button className="secondary-button">URL</button> 
                     </div>
                 </div>
-                <img className="info-card__image" src={testimage} />
+                <img className="info-card__image" src={`http://localhost:8090/${chunkData.image}`} />
                 <img onClick={onClose} className="icon" src={close} />
             </section>
         </motion.div>
