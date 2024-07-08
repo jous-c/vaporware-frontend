@@ -19,6 +19,7 @@ const LibraryPage = () => {
     getSnippets();
   }, []);
 
+
   return (
     <>
     <main className="main">
@@ -31,7 +32,8 @@ const LibraryPage = () => {
         <span>memes</span>
     </section>
     <section className="library">
-       <CardMedium />
+      
+    
     </section>
     </main>
  

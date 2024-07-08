@@ -1,23 +1,45 @@
 import "../CardSmall/CardSmall.scss";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import InfoModal from "../InfoModal/InfoModal"
 
 const CardSmall = ({ data, chunkData, onClick }) => {
+
+
+    const youtubeImage = (url) => {
+
+      const youtubeIdParser = (url) => {
+        const regExp =
+          /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|watch\?.+&v=)([^#&?]{11}).*/;
+        const match = url.match(regExp);
+        return match ? match[1] : false;
+      }
+
+      const youtubeId = youtubeIdParser(chunkData.url);
+      return `https://img.youtube.com/vi/${youtubeId}/0.jpg`;
+
+    };
+
   const defaultStyle = "default";
   const defaultBorder = "";
 
   const [style, setStyle] = useState(defaultStyle);
   const [blurBorder, setBlurBorder] = useState(defaultBorder);
-  const [ImageVanish, setImageVanish] = useState("");
+  const [infoModalOpen, setInfoModalOpen] = useState(false);
+
 
   const clickToChange = () => {
-    if (style === "default") setStyle("blurred");
+    if (style === "default") setInfoModalOpen(true);
     if (style === "blurred") setStyle("default");
     if (blurBorder === "default-border") setBlurBorder("blurred-border");
   };
 
 
-  const timedBlur = (card) => {
+const handleInfoModalClose = () => {
+  setInfoModalOpen(false);
+}
+
+const timedBlur = (card) => {
     // if current timestamp - data.timestamp is greater than X days in unix time
 
     if (new Date() / 1000 - chunkData.timestamp > 86400) {
@@ -37,24 +59,6 @@ const CardSmall = ({ data, chunkData, onClick }) => {
     damping: 30,
   };
 
-//   const url = "youtube.com/watch?v=JGwWNGJdvx8";
-
-//   const youtubeIdParser = (url) => {
-//     const regExp =
-//       /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|watch\?.+&v=)([^#&?]{11}).*/;
-//     const match = url.match(regExp);
-//     return match ? match[1] : false;
-//   }
-
-//   const youtubeId = youtubeIdParser(chunkData?.url);
-
-//   const youtubeImage = (id) => {
-//     return `https://img.youtube.com/vi/${id}/0.jpg`;
-//   };
-
-//   console.log('chunkData.url:', chunkData?.url);
-//   console.log('youtubeId:', youtubeId);
-//   console.log('youtubeImage:', youtubeImage(youtubeId));
 
   return (
     <>
@@ -71,7 +75,7 @@ const CardSmall = ({ data, chunkData, onClick }) => {
     
         <img
           className={`card-small__image`}
-          src={`http://localhost:8090/${chunkData.image}`}
+          src={chunkData.image ? `http://localhost:8090/${chunkData.image}` : youtubeImage(chunkData.url)}
           alt={chunkData.title}
         />
         <div className="card-small__description">
@@ -80,6 +84,10 @@ const CardSmall = ({ data, chunkData, onClick }) => {
         </div>
       
       </motion.div>
+
+
+      {infoModalOpen && <InfoModal onClose={handleInfoModalClose}
+        chunkData = { chunkData } />}
     </>
   );
 };

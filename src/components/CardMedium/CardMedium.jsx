@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import InfoModal from "../InfoModal/InfoModal"
 
-const CardMedium = ({ chunkData }) => {
+const CardMedium = ({ chunkData, snippetsData }) => {
   const defaultStyle = "default";
   const defaultBorder = "";
 
