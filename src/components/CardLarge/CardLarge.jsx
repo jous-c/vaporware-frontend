@@ -44,8 +44,8 @@ const CardLarge = ({ chunkData }) => {
         transition={spring}
         className={`card-large ${style}`}
         whileHover={{
-          scale: 1.1,
-          transition: { duration: 2 },
+          scale: 0.95,
+          transition: { duration: 0.7 },
         }}
       >
         <img

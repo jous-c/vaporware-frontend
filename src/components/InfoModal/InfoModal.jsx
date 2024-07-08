@@ -47,7 +47,7 @@ const InfoModal = ({ onClose, chunkData }) => {
                   
                     <div className="info-card__bottom">
                     <p className="info-card__time-label">08/08/2022 10:31PM</p>
-                    <button className="secondary-button">URL</button> 
+                    <button className="secondary-button">SAVE TO LIBRARY</button> 
                     </div>
                 </div>
                 <img className="info-card__image" src={`http://localhost:8090/${chunkData.image}`} />

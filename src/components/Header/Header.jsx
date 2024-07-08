@@ -19,12 +19,6 @@ const Header = () => {
         </div >
       </Link>
 
-      <Link to={"/analysis"}>
-      <div className="tabs__item" onclick="">
-        Analysis
-      </div>
-
-      </Link>
       <div className="tabs__searchbar">
   
     </div>

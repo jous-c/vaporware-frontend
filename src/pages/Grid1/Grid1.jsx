@@ -2,7 +2,7 @@ import '../Grid1/Grid.scss'
 import image1 from '../../assets/images/solar-eclipse.png'
 import { useState } from 'react';
 
-const Library = () => {
+const Grid1 = () => {
 
     const defaultStyle = "default"
 
@@ -41,4 +41,4 @@ const Library = () => {
   );
 };
 
-export default Library
+export default Grid1

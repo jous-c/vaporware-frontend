@@ -2,10 +2,11 @@
 
 .background{
     background-size: 28px 28px;
+    background-color: #f7f6ea;
     background-image:
       linear-gradient(to right, rgb(196, 196, 196)  1px, transparent 1px),
       linear-gradient(to bottom, rgb(196, 196, 196) 1px, transparent 1px);
-    margin: 0 4rem 0 4rem;
+    padding: 0 4rem 0 4rem;
 }
 
 .main-container{
