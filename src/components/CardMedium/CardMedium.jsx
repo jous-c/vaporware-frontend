@@ -50,6 +50,10 @@ const handleInfoModalClose = () => {
         layout
         transition={spring}
         className={`card-medium ${style}`}
+        whileHover={{
+          scale: 0.95,
+          transition: { duration: 0.8 },
+        }}
       >
         <img
           className="card-medium__image"

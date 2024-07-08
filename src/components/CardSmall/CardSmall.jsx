@@ -62,7 +62,10 @@ const CardSmall = ({ data, chunkData, onClick }) => {
         onClick={clickToChange}
         layout
         transition={spring}
-        
+        whileHover={{
+          scale: 0.95,
+          transition: { duration: 0.8 },
+        }}
         className={`card-small ${style}`}
       >
     
