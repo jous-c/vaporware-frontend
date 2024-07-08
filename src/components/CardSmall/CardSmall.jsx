@@ -67,7 +67,7 @@ const timedBlur = (card) => {
         layout
         transition={spring}
         whileHover={{
-          scale: 0.95,
+          scale: 0.97,
           transition: { duration: 0.8 },
         }}
         className={`card-small ${style}`}

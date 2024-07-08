@@ -19,6 +19,8 @@ const MainBoard = () => {
     getSnippets();
   }, []);
 
+  
+
   return (
     <>
      <Nav 
