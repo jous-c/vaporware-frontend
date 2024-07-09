@@ -3,27 +3,29 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import close from "../../assets/close-icon.svg";
 import { motion } from "framer-motion";
+import Papa from 'papaparse';
 
 const UploadForm = ({ onClose, getSnippets }) => {
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
+  
   const submitHandler = async (e) => {
     e.preventDefault();
     const newSnippet = {
       title: e.target.title.value,
       url: e.target.url.value,
       description: e.target.description.value,
-      image: e.target.image.value
     };
     console.log(newSnippet);
-    // postNewSnippet(newSnippet)
+
     await axios.post("http://localhost:8090/snippets", newSnippet);
 
-    // if(getSnippetsData){
+
     getSnippets();
     navigate("/");
-    // }
+    
   };
+
 
   const dropIn = {
     hidden: {
@@ -46,6 +48,8 @@ const UploadForm = ({ onClose, getSnippets }) => {
     },
   };
 
+
+
   return (
     <>
        
@@ -59,7 +63,7 @@ const UploadForm = ({ onClose, getSnippets }) => {
             >
             <form onSubmit={submitHandler} className="form">
             <img onClick={onClose} className="icon" src={close} />
-            <input type="file" name="image" /> 
+            <input type="file" name="file" /> 
             <input className="input-small" type="text" name="title" placeholder="Title" />
             <input className="input-small" type="text" name="url" placeholder="URL" />
             <textarea

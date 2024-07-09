@@ -5,37 +5,13 @@ import testimage from '../../assets/images/solar-eclipse.png'
 
 const InfoModal = ({ onClose, chunkData }) => {
 
-
-  const dropIn = {
-    hidden: {
-      y: "100vh",
-      opacity: 0,
-    },
-    visible: {
-      y: "-75vh",
-      opacity: 1,
-      transition: {
-        durtion: 0.1,
-        type: "spring",
-        damping: 28,
-        stiffness: 225,
-      }
-    },
-    exit: {
-      y: "100vh",
-      opacity: 0,
-    },
-  };
-
+  
+ 
     return(
         <>
+         
         <section className="infocard-container">
-        <motion.div
-            variants={dropIn}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            >
+      
             <section className="info-card">
     
                 <div className="info-card__container-left">
@@ -53,9 +29,10 @@ const InfoModal = ({ onClose, chunkData }) => {
                 <img className="info-card__image" src={`http://localhost:8090/${chunkData.image}`} />
                 <img onClick={onClose} className="icon" src={close} />
             </section>
-        </motion.div>
-        
+      
       </section>
+ 
+
         </>
     )
 }

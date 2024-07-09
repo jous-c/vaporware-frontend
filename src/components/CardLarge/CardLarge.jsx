@@ -1,9 +1,11 @@
 import "../CardLarge/CardLarge.scss";
-import image1 from "../../assets/images/solar-eclipse.png";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import InfoModal from "../CardLarge/CardLarge"
 
 const CardLarge = ({ chunkData }) => {
+
+  
   const defaultStyle = "default";
   const defaultBorder = "";
 

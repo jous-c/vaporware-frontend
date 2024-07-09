@@ -7,13 +7,13 @@ const Header = () => {
     <>
     <section className="header">
     <div className="tabs">
-    <Link to={"/"}>
+    <Link to={"/"} style={{ textDecoration: 'none' }}>
         <div className="tabs__item" onclick="" id="defaultOpen">
           Browse
         </div >
       </Link>
 
-      <Link to={"/library"}>
+      <Link to={"/library"} style={{ textDecoration: 'none' }} >
         <div  className="tabs__item" onclick="">
           Library
         </div >

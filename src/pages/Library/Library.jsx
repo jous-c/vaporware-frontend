@@ -32,8 +32,8 @@ const LibraryPage = () => {
         <span>memes</span>
     </section>
     <section className="library">
-      
-    
+        <VideoCard />
+
     </section>
     </main>
  

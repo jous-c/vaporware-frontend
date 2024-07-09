@@ -1,9 +1,9 @@
-import "../CardSmall/CardSmall.scss";
+import '../VideoCard/VideoCard.scss'
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import InfoModal from "../InfoModal/InfoModal"
 
-const CardSmall = ({ data, chunkData, onClick }) => {
+const VideoCard = ({ data, chunkData, onClick }) => {
 
 
     const youtubeImage = (url) => {
@@ -92,4 +92,4 @@ const timedBlur = (card) => {
   );
 };
 
-export default CardSmall;
+export default VideoCard;
