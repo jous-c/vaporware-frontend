@@ -16,7 +16,6 @@ function App() {
           <Route path="/library" element={<LibraryPage/>} /> 
           <Route path="/" element={<MainBoard />} />
           <Route path="/longterm" element={<Grid1/>} />
- 
       </Routes>
       </BrowserRouter>
     </>

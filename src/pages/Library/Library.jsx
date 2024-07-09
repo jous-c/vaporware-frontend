@@ -1,24 +1,33 @@
 
-import CardsGrid from "../../components/CardsGrid/CardsGrid.jsx";
-import Nav from '../../components/Nav/Nav.jsx';
 import axios from "axios";
 import { useEffect, useState } from "react";
-import CardMedium from "../../components/CardMedium/CardMedium.jsx"
+import CsvUploadForm from "../../components/CsvUploadForm/CsvUploadForm"
 
 const LibraryPage = () => {
-  const API_URL = "http://localhost:8090/snippets";
+  const API_URL = "http://localhost:8090/playlist";
 
-  const [snippetsData, setSnippetsData] = useState([]);
+  const [playlistData, setPlaylistData] = useState([]);
 
-  const getSnippets = async () => {
-    const response = await axios("http://localhost:8090/snippets");
-    setSnippetsData(response.data);
+  const getPlaylist = async () => {
+    const response = await axios("http://localhost:8090/playlist");
+    setPlaylistData(response.data);
   };
 
   useEffect(() => {
-    getSnippets();
+    getPlaylist();
   }, []);
 
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const handleClickOpen = () => {
+      console.log("Button clicked");
+      setModalOpen(true);
+  }
+
+  const handleModalClose = () => {
+      setModalOpen(false);
+  }
+  
 
   return (
     <>
@@ -32,12 +41,13 @@ const LibraryPage = () => {
         <span>memes</span>
     </section>
     <section className="library">
-        <VideoCard />
-
+     
+        <button onClick={handleClickOpen}>find out</button>
+   
     </section>
     </main>
  
-    
+      {modalOpen && <CsvUploadForm onClose={handleModalClose} getPlaylist = {getPlaylist} />}
     </>
   );
 };

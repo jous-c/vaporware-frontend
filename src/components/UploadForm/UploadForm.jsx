@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import close from "../../assets/close-icon.svg";
 import { motion } from "framer-motion";
-import Papa from 'papaparse';
 
 const UploadForm = ({ onClose, getSnippets }) => {
 
@@ -19,7 +18,6 @@ const UploadForm = ({ onClose, getSnippets }) => {
     console.log(newSnippet);
 
     await axios.post("http://localhost:8090/snippets", newSnippet);
-
 
     getSnippets();
     navigate("/");
