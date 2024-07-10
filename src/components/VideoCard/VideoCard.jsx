@@ -6,7 +6,7 @@ import InfoModal from "../InfoModal/InfoModal"
 const VideoCard = ({ data, playlistChunk, onClick }) => {
 
   console.log(playlistChunk)
-  console.log(playlistChunk["Video Id"])
+  console.log(playlistChunk["Video ID"])
     // const youtubeImage = (url) => {
 
     //   const youtubeIdParser = (url) => {
@@ -80,7 +80,7 @@ const timedBlur = (card) => {
     
         <img
           className={`video-card__image`}
-          src={youtubeImageURL(playlistChunk["Video Id"])}
+          src={youtubeImageURL(playlistChunk["Video ID"])}
         />
         <div className="video-card__description">
           <p className="video-card__date">{playlistChunk["Playlist Video Creation Timestamp"]}</p>

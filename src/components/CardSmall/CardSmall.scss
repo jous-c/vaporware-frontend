@@ -27,11 +27,16 @@
 .blurred{
     border: 20px solid #f9f9f1;
     border-radius: 12px;
-    filter: blur(4px) opacity(20%);
+    filter: blur(4px) opacity(70%);
     transition: filter 3s;
     cursor: pointer;
     font-family: 'Stellar-light';
 }
+
+.blurred25{
+    filter: blur(4px) opacity(25%);
+}
+
 
 .default{
     color: #222222;

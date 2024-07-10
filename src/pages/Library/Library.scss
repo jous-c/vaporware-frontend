@@ -1,5 +1,42 @@
+@use "../../styles/resets.scss" as *;
+
 .main{
     background-color: #f7f6ea;
     display: flex;
+    background-image: radial-gradient(black 1px, transparent 0);
+    background-size: 32px 32px;
+
+    &__side-container{
+        margin: 8rem 0 0 4rem;
+    }
+
+    &__title{
+        font-family: 'Montreal-regular';
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
 }
 
+.submit-button{
+    margin-top: 3rem;
+    background-color: #ecde16;
+    border-radius: 12px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    height: 2.75rem;
+    border: 1px solid #000000;
+    font-family: 'Right Grotesk Mono';
+    font-size: 1.25rem;
+}
+
+.submit-button:hover{
+    background-color: #ffee00;
+}
+
+.library-description{
+    &__labels{
+        font-size: 1.125rem;
+        font-family: 'Right Grotesk Mono';
+    }
+}

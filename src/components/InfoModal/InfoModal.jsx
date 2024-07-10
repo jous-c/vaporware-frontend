@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import close from "../../assets/close-icon.svg"
 import "../InfoModal/InfoModal.scss";
 
-const InfoModal = ({ onClose, chunkData }) => {
+const InfoModal = ({ onClose, chunkData, playlistChunk }) => {
 
   
  

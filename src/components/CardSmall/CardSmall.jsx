@@ -49,6 +49,12 @@ const timedBlur = (card) => {
     }
   };
 
+  if (new Date() / 1000 - chunkData.timestamp > 864000) {
+    setTimeout((card) => {
+      setStyle("blurred25");
+    }, 500); // set blur styling
+  }
+
   useEffect(() => {
     timedBlur();
   }, []);
