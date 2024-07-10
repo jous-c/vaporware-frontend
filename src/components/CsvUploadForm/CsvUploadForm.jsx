@@ -58,7 +58,7 @@ const CsvUploadForm = ({ onClose, getPlaylist }) => {
         transition: {
           duration: 0.1,
           type: "spring",
-          damping: 20,
+          damping: 22,
           stiffness: 200,
         },
       },
@@ -83,7 +83,7 @@ const CsvUploadForm = ({ onClose, getPlaylist }) => {
             exit="exit"
             >
 
-        <form onSubmit={submitHandler} className="form">
+        <form onSubmit={submitHandler} className="form2">
             <img onClick={onClose} className="icon" src={close} />
             <input className="input-small" type="text" name="title" placeholder="Title" />
             <input type="file" name="file"/> 
