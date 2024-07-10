@@ -7,7 +7,8 @@
     background-size: 32px 32px;
 
     &__side-container{
-        margin: 8rem 0 0 4rem;
+        margin: 8rem 0 0 3.5rem;
+        width: 25%;
     }
 
     &__title{
@@ -27,7 +28,7 @@
     height: 2.75rem;
     border: 1px solid #000000;
     font-family: 'Right Grotesk Mono';
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .submit-button:hover{
@@ -36,7 +37,7 @@
 
 .library-description{
     &__labels{
-        font-size: 1.125rem;
-        font-family: 'Right Grotesk Mono';
+        font-size: 1rem;
+        font-family: 'Montreal-regular';
     }
 }

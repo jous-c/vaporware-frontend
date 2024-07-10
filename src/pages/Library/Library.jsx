@@ -23,12 +23,13 @@ const LibraryPage = () => {
   const handleClickOpen = () => {
     console.log("Button clicked");
     setModalOpen(true);
+    
   };
 
   const handleModalClose = () => {
     setModalOpen(false);
   };
-
+  console.log("Modal state:", modalOpen);
   return (
     <>
       <main className="main">
@@ -45,7 +46,7 @@ const LibraryPage = () => {
             <p className="library-description__labels">
             Total amount: {playlistData[0]?.file.length}
             </p>
-            <button onClick={handleClickOpen} className="submit-button">find out</button>
+            <button onClick={handleClickOpen} className="submit-button">Find Out</button>
           </section>
         </section>
 
@@ -54,7 +55,7 @@ const LibraryPage = () => {
         </section>
       </main>
 
-      {modalOpen && (<CsvUploadForm onClose={handleModalClose} getPlaylist={getPlaylist} />)}
+      {modalOpen && <CsvUploadForm onClose={handleModalClose} getPlaylist={getPlaylist} />}
     </>
   );
 };
