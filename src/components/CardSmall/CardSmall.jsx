@@ -2,6 +2,8 @@ import "../CardSmall/CardSmall.scss";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import InfoModal from "../InfoModal/InfoModal"
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 
 const CardSmall = ({ data, chunkData, onClick }) => {
 
@@ -65,6 +67,8 @@ const timedBlur = (card) => {
     damping: 30,
   };
 
+  dayjs.extend(relativeTime)
+
 
   return (
     <>
@@ -86,7 +90,7 @@ const timedBlur = (card) => {
         />
         <div className="card-small__description">
           <p>{chunkData?.title}</p>
-          <p className="card-small__date">{chunkData?.timestamp}</p>
+          <p className="card-small__date">{dayjs(chunkData?.timestamp).fromNow()}</p>
         </div>
       
       </motion.div>
