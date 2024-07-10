@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import close from "../../assets/close-icon.svg"
 import "../InfoModal/InfoModal.scss";
-import testimage from '../../assets/images/solar-eclipse.png'
 
 const InfoModal = ({ onClose, chunkData }) => {
 

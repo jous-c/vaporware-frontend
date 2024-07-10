@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import CsvUploadForm from "../../components/CsvUploadForm/CsvUploadForm"
+import CardGrid2 from "../../components/CardGrid2/CardGrid2"
 
 const LibraryPage = () => {
   const API_URL = "http://localhost:8090/playlist";
@@ -40,10 +41,10 @@ const LibraryPage = () => {
         <span>Gardening</span>
         <span>memes</span>
     </section>
+
     <section className="library">
-     
         <button onClick={handleClickOpen}>find out</button>
-   
+        <CardGrid2 playlistData = {playlistData}/>
     </section>
     </main>
  

@@ -3,22 +3,27 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import InfoModal from "../InfoModal/InfoModal"
 
-const VideoCard = ({ data, chunkData, onClick }) => {
+const VideoCard = ({ data, playlistChunk, onClick }) => {
 
+  console.log(playlistChunk)
+  console.log(playlistChunk["Video Id"])
+    // const youtubeImage = (url) => {
 
-    const youtubeImage = (url) => {
+    //   const youtubeIdParser = (url) => {
+    //     const regExp =
+    //       /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|watch\?.+&v=)([^#&?]{11}).*/;
+    //     const match = url.match(regExp);
+    //     return match ? match[1] : false;
+    //   }
 
-      const youtubeIdParser = (url) => {
-        const regExp =
-          /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|watch\?.+&v=)([^#&?]{11}).*/;
-        const match = url.match(regExp);
-        return match ? match[1] : false;
-      }
+    //   const youtubeId = youtubeIdParser(playlistChunk.url);
+    //   return `https://img.youtube.com/vi/${youtubeId}/0.jpg`;
 
-      const youtubeId = youtubeIdParser(chunkData.url);
-      return `https://img.youtube.com/vi/${youtubeId}/0.jpg`;
+    // };
 
-    };
+  const youtubeImageURL = (id) => {
+    return `https://img.youtube.com/vi/${id}/0.jpg`
+  }
 
   const defaultStyle = "default";
   const defaultBorder = "";
@@ -42,7 +47,7 @@ const handleInfoModalClose = () => {
 const timedBlur = (card) => {
     // if current timestamp - data.timestamp is greater than X days in unix time
 
-    if (new Date() / 1000 - chunkData.timestamp > 86400) {
+    if (new Date() / 1000 - playlistChunk.timestamp > 86400) {
       setTimeout((card) => {
         setStyle("blurred");
       }, 500); // set blur styling
@@ -70,24 +75,21 @@ const timedBlur = (card) => {
           scale: 0.97,
           transition: { duration: 0.8 },
         }}
-        className={`card-small ${style}`}
+        className={`video-card ${style}`}
       >
     
         <img
-          className={`card-small__image`}
-          src={chunkData.image ? `http://localhost:8090/${chunkData.image}` : chunkData.url ? youtubeImage(chunkData.url) : chunkData.file}
-          alt={chunkData.title}
+          className={`video-card__image`}
+          src={youtubeImageURL(playlistChunk["Video Id"])}
         />
-        <div className="card-small__description">
-          <p>{chunkData?.title}</p>
-          <p className="card-small__date">{chunkData?.timestamp}</p>
+        <div className="video-card__description">
+          <p className="video-card__date">{playlistChunk["Playlist Video Creation Timestamp"]}</p>
         </div>
       
       </motion.div>
 
-
       {infoModalOpen && <InfoModal onClose={handleInfoModalClose}
-        chunkData = { chunkData } />}
+        playlistChunk = { playlistChunk } />}
     </>
   );
 };
