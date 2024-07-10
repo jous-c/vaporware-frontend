@@ -7,19 +7,7 @@ const VideoCard = ({ data, playlistChunk, onClick }) => {
 
   console.log(playlistChunk)
   console.log(playlistChunk["Video ID"])
-    // const youtubeImage = (url) => {
 
-    //   const youtubeIdParser = (url) => {
-    //     const regExp =
-    //       /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|watch\?.+&v=)([^#&?]{11}).*/;
-    //     const match = url.match(regExp);
-    //     return match ? match[1] : false;
-    //   }
-
-    //   const youtubeId = youtubeIdParser(playlistChunk.url);
-    //   return `https://img.youtube.com/vi/${youtubeId}/0.jpg`;
-
-    // };
 
   const youtubeImageURL = (id) => {
     return `https://img.youtube.com/vi/${id}/0.jpg`

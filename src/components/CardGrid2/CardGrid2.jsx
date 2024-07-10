@@ -4,7 +4,7 @@ import VideoCard from "../VideoCard/VideoCard.jsx"
 const CardsGrid2 = ({ playlistData }) => {
 
     if (!playlistData || playlistData.length === 0) {
-        return <div>Loading...</div>; // Or any other loading indicator 
+        return <div> <h2 className="loading-text"> Digging through your old folders... </h2></div>; // Or any other loading indicator 
       }
     
       const chunkSize = 9;

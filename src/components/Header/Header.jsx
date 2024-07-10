@@ -9,13 +9,13 @@ const Header = () => {
     <div className="tabs">
     <Link to={"/"} style={{ textDecoration: 'none' }}>
         <div className="tabs__item" id="defaultOpen">
-          Browse
+          Library
         </div >
       </Link>
 
       <Link to={"/library"} style={{ textDecoration: 'none' }} >
         <div  className="tabs__item" >
-          Library
+          Browse
         </div >
       </Link>
 

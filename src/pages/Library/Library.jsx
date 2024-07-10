@@ -21,7 +21,6 @@ const LibraryPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleClickOpen = () => {
-    console.log("Button clicked");
     setModalOpen(true);
     
   };
@@ -29,12 +28,12 @@ const LibraryPage = () => {
   const handleModalClose = () => {
     setModalOpen(false);
   };
-  console.log("Modal state:", modalOpen);
+
   return (
     <>
       <main className="main">
         <section className="main__side-container">
-          <h2 className="main__title">Find your old playlists </h2>
+          <h2 className="main__title">Browse </h2>
 
           <section className="library-description">
             <p className="library-description__labels">
@@ -46,7 +45,7 @@ const LibraryPage = () => {
             <p className="library-description__labels">
             Total amount: {playlistData[0]?.file.length}
             </p>
-            <button onClick={handleClickOpen} className="submit-button">Find Out</button>
+            <button onClick={handleClickOpen} className="submit-button">Upload playlist history</button>
           </section>
         </section>
 
