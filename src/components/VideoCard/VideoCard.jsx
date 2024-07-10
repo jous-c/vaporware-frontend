@@ -38,7 +38,7 @@ const timedBlur = (card) => {
     if (new Date() / 1000 - playlistChunk.timestamp > 86400) {
       setTimeout((card) => {
         setStyle("blurred");
-      }, 500); // set blur styling
+      }, 1000); // set blur styling
     }
   };
 

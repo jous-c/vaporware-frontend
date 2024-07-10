@@ -44,7 +44,7 @@ const handleInfoModalClose = () => {
     if (new Date() / 1000 - chunkData.timestamp > 86400) {
       setTimeout((card) => {
         setStyle("blurred");
-      }, 500);
+      }, 1000);
     }
   };
 
