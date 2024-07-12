@@ -2,17 +2,15 @@ import "../CardGrid2/CardGrid2.scss";
 import VideoCard from "../VideoCard/VideoCard.jsx";
 import { useState } from "react"
 
-const CardsGrid2 = ({ playlistData }) => {
 
- 
+const CardsGrid2 = ({ playlistData }) => {
 
   if (!playlistData || playlistData.length === 0) {
     return (
       <div>
         <h2 className="loading-text"> Digging through your old folders... </h2>
-       
       </div>
-    ); // Or any other loading indicator
+    ); 
   }
 
   const chunkSize = 9;
