@@ -17,19 +17,25 @@ For anyone who wants to save things that are meaningful to them
 
 1. Gallery of Interactive cards that fade away as time goes by
 2. Upload/Create a new memory snippet with notes
-3. Delete memory snippet
-4. Local database
+3. Populate with youtube video's thumbnail
+4. Populate library with youtube playlist CSV data
 
 
 ## Implementation
 
 ### Tech Stack
 
+HTML/CSS
+Javascript
 React
-Framer Motion Library
 Node.js
 Express
-Knex
+
+Libraries:
+Framer Motion Library
+Day.js
+Papaparse
+
 
 
 ### APIs
@@ -46,7 +52,7 @@ https://www.figma.com/proto/h0jMDPzJzKRgbWwlVSVI8g/Memory-Board-(vapor-vaporware
 
 ### Data
 
-Work in progress
+
 
 ### Endpoints
 
